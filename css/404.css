@@ -1,0 +1,98 @@
+#header #scroll_container {
+    display: none;
+}
+
+#main.err404 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 500;
+}
+
+#main.err404 #fullmoonLong {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    max-width: 80%;
+    height: 800px;
+    max-height: 40%;
+    background: url(https://c1.marshall-ku.com/images/fullmoon.404.png) left
+        bottom no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#main.err404 h2 {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#input404 {
+    max-width: 100%;
+}
+
+#searchform404 {
+    position: relative;
+    display: flex;
+    padding-bottom: 3px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+#searchform404 .icon-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#searchform404 #search404 {
+    width: 325px;
+}
+
+#border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--main-color-opacity);
+}
+
+#border::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#search404:focus ~ #border::before {
+    transform: scaleX(1);
+}
+
+#links .button {
+    display: inline-flex;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    display: none;
+}
