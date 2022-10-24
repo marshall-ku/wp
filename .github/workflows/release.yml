@@ -1,0 +1,20 @@
+name: Release new version
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    release:
+        name: Release new version
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Release new tag
+              uses: actions/create-release@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+              with:
+                  tag_name: ${{ github.event.head_commit.message }}
+                  release_name: ${{ github.event.head_commit.message }}
